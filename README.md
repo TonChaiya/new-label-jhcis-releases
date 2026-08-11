@@ -1,15 +1,31 @@
 # New Label JHCIS Autoprint Releases
 
-พื้นที่เผยแพร่ตัวติดตั้งและแพ็กเกจอัปเดตของ New Label JHCIS Autoprint
+พื้นที่เผยแพร่ตัวติดตั้งและแพ็กเกจอัปเดตของระบบพิมพ์ฉลากยา New Label JHCIS
 
-## Latest version
+## เวอร์ชันล่าสุด
 
-- Version: `2026.08.11.4`
+- เวอร์ชัน: `2026.08.11.7`
 - Channel: `stable`
-- Installer: ดูที่หน้า [Releases](https://github.com/TonChaiya/new-label-jhcis-releases/releases)
-- Setup SHA-256: `33CA064D2B206860367FAA23FB26771833A98F28356466448D2B2CDD89B9BF16`
-- Update SHA-256: `9634FC4B05C47C5B3DEBCF6DC14C3CCF9B085B5D103933C0E982CBD90500CEB2`
+- วันที่เผยแพร่: 11 สิงหาคม 2026
+- [ดาวน์โหลดจากหน้า Releases](https://github.com/TonChaiya/new-label-jhcis-releases/releases/tag/v2026.08.11.7)
+- Setup SHA-256: `590857D20BB2C714F604712DB787B705402DE4B7BFCF7494294F499197606D1F`
+- Update SHA-256: `4B8873A414DDC2DEA7D9725AD7D591FDAC10B1ECC6C32DACEA517C8238FA2976`
 
-ไฟล์ใน Repository นี้ไม่มีการตั้งค่าฐานข้อมูล รหัสผ่าน ข้อมูลผู้ป่วย Log หรือ Output จากเครื่องใช้งาน
+## สิ่งที่เปลี่ยนในเวอร์ชัน 2026.08.11.7
 
-> หมายเหตุ: ตัวติดตั้งเวอร์ชันปัจจุบันยังไม่มีลายเซ็นดิจิทัล ควรตรวจสอบค่า SHA-256 ก่อนติดตั้ง
+- แก้สถานะ `processing`, `ready` และ `printing` ที่ค้างเกิน 10 นาทีไม่ให้ขวางการอัปเดตตลอดไป
+- ไม่ถือรายการ `pending` และ `waiting` เป็นงานที่ขวางการอัปเดต
+- เพิ่มรายละเอียดขั้นตอนและชื่อ path ใน `updater.log` เมื่ออัปเดตไม่สำเร็จ
+- ป้องกันข้อผิดพลาดระหว่าง rollback กลบสาเหตุเดิม
+- ลด Update ZIP สำหรับซ่อมเครื่องที่ใช้ Updater รุ่นเก่าเหลือเฉพาะไฟล์ระบบที่จำเป็น
+- คงการปรับระยะห่างก่อน “สรรพคุณ” และ “วิธีใช้” ของฉลาก Auto จากเวอร์ชัน `.6`
+
+อ่านรายละเอียดทุกรุ่นได้ที่ [CHANGELOG.md](CHANGELOG.md) และขั้นตอนใช้งานที่ [UPDATE_GUIDE.md](UPDATE_GUIDE.md)
+
+## การรักษาข้อมูลเดิม
+
+แพ็กเกจ Release ไม่มีรหัสผ่าน ข้อมูลผู้ป่วย Log หรือ Output จากเครื่องใช้งาน ระบบอัปเดตไม่เขียนทับไฟล์ตั้งค่าเฉพาะเครื่อง เช่น `config.php`, `autoprint_config.php` และ `settings.json`
+
+การปรับ schema ทำผ่าน `Autoprint/setup_db.php` ในฐาน `autoprintdb` โดยไม่ลบข้อมูลเดิม และระบบจัดการคิวอัปเดตไม่แก้ฐาน `jhcisdb`
+
+> ตัวติดตั้งปัจจุบันยังไม่มีลายเซ็นดิจิทัล กรุณาดาวน์โหลดจาก Repository นี้และตรวจสอบ SHA-256 ก่อนติดตั้ง
