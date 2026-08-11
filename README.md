@@ -4,20 +4,19 @@
 
 ## เวอร์ชันล่าสุด
 
-- เวอร์ชัน: `2026.08.11.9`
+- เวอร์ชัน: `2026.08.11.9.1`
 - Channel: `stable`
 - วันที่เผยแพร่: 11 สิงหาคม 2026
-- [ดาวน์โหลดจากหน้า Releases](https://github.com/TonChaiya/new-label-jhcis-releases/releases/tag/v2026.08.11.9)
-- Setup SHA-256: `7BD13F26E18F817AE783BCEF59EDD54C37DDA903FE90C08FD1D677E1E2955C4D`
-- Update SHA-256: `C12E0EAA3DE75E61C74878D2EA9BD84BEF2DD1EDE867F873CC8C2885E95C6308`
+- [ดาวน์โหลดจากหน้า Releases](https://github.com/TonChaiya/new-label-jhcis-releases/releases/tag/v2026.08.11.9.1)
+- Setup SHA-256: `CFC43993280BBD1E0754A0ED56C9246AF69D88D157F34584273B85A92C1B867C`
+- Update SHA-256: `375E96BA09ACD183CBEEE2965D979CEFC99641D3F302BA6349379B91913E45D1`
 
-## สิ่งที่เปลี่ยนในเวอร์ชัน 2026.08.11.9
+## สิ่งที่เปลี่ยนในเวอร์ชัน 2026.08.11.9.1
 
-- แก้ `WinError 5 Access is denied` ขณะแทนที่ `AutoprintController.exe`
-- Updater รุ่นใหม่รอให้ PyInstaller หรือ Antivirus ปล่อย file handle สูงสุด 45 วินาทีก่อนลองแทนที่อีกครั้ง
-- Update ZIP รอบนี้ไม่แทนที่ Controller เพื่อให้เครื่องที่ติด file lock สามารถติดตั้ง Updater รุ่นแก้ไขได้ก่อน
-- รวมการปรับรูปแบบฉลาก Auto จากเวอร์ชัน `.8` ครบถ้วน
-- Setup ยังคงเป็นชุดเต็มสำหรับติดตั้งเครื่องใหม่หรือใช้ติดตั้งทับ
+- ลดขนาดตัวอักษรบรรทัด eGFR ของฉลาก Auto เป็น `12pt` ทุกโหมด
+- คงการแก้ file lock และ Bootstrap Update จากเวอร์ชัน `.9`
+- Update ZIP ไม่แทนที่ Controller เพื่อรองรับเครื่องที่เคยพบ `WinError 5`
+- Setup ยังคงเป็นชุดเต็มสำหรับเครื่องใหม่หรือการติดตั้งทับ
 
 อ่านรายละเอียดทุกรุ่นได้ที่ [CHANGELOG.md](CHANGELOG.md) และขั้นตอนใช้งานที่ [UPDATE_GUIDE.md](UPDATE_GUIDE.md)
 
