@@ -1,0 +1,16 @@
+# Release binaries belong in GitHub Release assets, not Git history.
+*.exe
+*.zip
+*.7z
+*.msi
+
+# Never publish machine-specific configuration or operational data.
+config.php
+autoprint_config.php
+settings.json
+*.log
+*.sql
+*.db
+*.sqlite*
+output/
+logs/
