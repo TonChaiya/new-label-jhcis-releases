@@ -4,22 +4,20 @@
 
 ## เวอร์ชันล่าสุด
 
-- เวอร์ชัน: `2026.08.11.8`
+- เวอร์ชัน: `2026.08.11.9`
 - Channel: `stable`
 - วันที่เผยแพร่: 11 สิงหาคม 2026
-- [ดาวน์โหลดจากหน้า Releases](https://github.com/TonChaiya/new-label-jhcis-releases/releases/tag/v2026.08.11.8)
-- Setup SHA-256: `D5593B428931AEE30FCD77573C2F908084D23ADAEC166BDAF815DAD9209EBB26`
-- Update SHA-256: `99EDE6F4AEF292D460A89198D2BBBBA82C1E80BCCCA3B2719860ECD28BDF6DA0`
+- [ดาวน์โหลดจากหน้า Releases](https://github.com/TonChaiya/new-label-jhcis-releases/releases/tag/v2026.08.11.9)
+- Setup SHA-256: `7BD13F26E18F817AE783BCEF59EDD54C37DDA903FE90C08FD1D677E1E2955C4D`
+- Update SHA-256: `C12E0EAA3DE75E61C74878D2EA9BD84BEF2DD1EDE867F873CC8C2885E95C6308`
 
-## สิ่งที่เปลี่ยนในเวอร์ชัน 2026.08.11.8
+## สิ่งที่เปลี่ยนในเวอร์ชัน 2026.08.11.9
 
-- เพิ่มขนาดข้อความหลักและระยะบรรทัดของฉลาก Auto ให้อ่านง่ายขึ้น
-- ลดชื่อยาอังกฤษเป็น `11pt` เพื่อไม่ให้ชื่อยายาวดันวิธีใช้ไปฉลากหน้าถัดไป
-- ลดชื่อหน่วยบริการและที่อยู่เป็น `11pt` (`10.5pt` ในโหมด Compact/Dense)
-- ให้ข้อความวิธีใช้ยาวตัดบรรทัดภายในฉลาก
-- ไม่สร้างบรรทัดชื่อไทย สรรพคุณ วิธีใช้ หรือคำเตือนเมื่อไม่มีข้อมูล
-- ปรับเกณฑ์ Compact/Dense ไม่ให้ลดขนาดข้อความเร็วเกินไป
-- ใช้ Repair Update แบบย่อเพื่อรองรับเครื่องที่ยังใช้ Updater รุ่นเก่า
+- แก้ `WinError 5 Access is denied` ขณะแทนที่ `AutoprintController.exe`
+- Updater รุ่นใหม่รอให้ PyInstaller หรือ Antivirus ปล่อย file handle สูงสุด 45 วินาทีก่อนลองแทนที่อีกครั้ง
+- Update ZIP รอบนี้ไม่แทนที่ Controller เพื่อให้เครื่องที่ติด file lock สามารถติดตั้ง Updater รุ่นแก้ไขได้ก่อน
+- รวมการปรับรูปแบบฉลาก Auto จากเวอร์ชัน `.8` ครบถ้วน
+- Setup ยังคงเป็นชุดเต็มสำหรับติดตั้งเครื่องใหม่หรือใช้ติดตั้งทับ
 
 อ่านรายละเอียดทุกรุ่นได้ที่ [CHANGELOG.md](CHANGELOG.md) และขั้นตอนใช้งานที่ [UPDATE_GUIDE.md](UPDATE_GUIDE.md)
 
