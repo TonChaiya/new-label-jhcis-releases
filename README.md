@@ -4,19 +4,20 @@
 
 ## เวอร์ชันล่าสุด
 
-- เวอร์ชัน: `2026.08.11.9.1`
+- เวอร์ชัน: `2026.08.11.9.2`
 - Channel: `stable`
 - วันที่เผยแพร่: 11 สิงหาคม 2026
-- [ดาวน์โหลดจากหน้า Releases](https://github.com/TonChaiya/new-label-jhcis-releases/releases/tag/v2026.08.11.9.1)
-- Setup SHA-256: `CFC43993280BBD1E0754A0ED56C9246AF69D88D157F34584273B85A92C1B867C`
-- Update SHA-256: `375E96BA09ACD183CBEEE2965D979CEFC99641D3F302BA6349379B91913E45D1`
+- [ดาวน์โหลดจากหน้า Releases](https://github.com/TonChaiya/new-label-jhcis-releases/releases/tag/v2026.08.11.9.2)
+- Setup SHA-256: `507FAA7E09E524931F2DC4D5F303156FD52A7B1A35F017384931DD255169EE78`
+- Update SHA-256: `C012A871C7041F9BD08FF387631599574E6A6B7EA1663250FFA48998FB3757DB`
 
-## สิ่งที่เปลี่ยนในเวอร์ชัน 2026.08.11.9.1
+## สิ่งที่เปลี่ยนในเวอร์ชัน 2026.08.11.9.2
 
-- ลดขนาดตัวอักษรบรรทัด eGFR ของฉลาก Auto เป็น `12pt` ทุกโหมด
-- คงการแก้ file lock และ Bootstrap Update จากเวอร์ชัน `.9`
-- Update ZIP ไม่แทนที่ Controller เพื่อรองรับเครื่องที่เคยพบ `WinError 5`
-- Setup ยังคงเป็นชุดเต็มสำหรับเครื่องใหม่หรือการติดตั้งทับ
+- ย้าย “รวม … ฉลาก” ไปบรรทัดเดียวกับวันที่และเบอร์โทร
+- ทำตัวหนาเฉพาะข้อความ “รวม … ฉลาก”
+- ลดวันที่และเบอร์โทรเป็น `11pt` เท่าชื่อหน่วยบริการ
+- โหมด Compact/Dense ใช้ `10.5pt`
+- คง eGFR ที่ `12pt` และระบบ Bootstrap Update จากรุ่นก่อน
 
 อ่านรายละเอียดทุกรุ่นได้ที่ [CHANGELOG.md](CHANGELOG.md) และขั้นตอนใช้งานที่ [UPDATE_GUIDE.md](UPDATE_GUIDE.md)
 
