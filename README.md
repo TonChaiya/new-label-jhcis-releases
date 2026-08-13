@@ -4,20 +4,19 @@
 
 ## เวอร์ชันล่าสุด
 
-- เวอร์ชัน: `2026.08.11.9.2`
+- เวอร์ชัน: `2026.08.11.9.3`
 - Channel: `stable`
 - วันที่เผยแพร่: 11 สิงหาคม 2026
-- [ดาวน์โหลดจากหน้า Releases](https://github.com/TonChaiya/new-label-jhcis-releases/releases/tag/v2026.08.11.9.2)
-- Setup SHA-256: `507FAA7E09E524931F2DC4D5F303156FD52A7B1A35F017384931DD255169EE78`
-- Update SHA-256: `C012A871C7041F9BD08FF387631599574E6A6B7EA1663250FFA48998FB3757DB`
+- [ดาวน์โหลดจากหน้า Releases](https://github.com/TonChaiya/new-label-jhcis-releases/releases/tag/v2026.08.11.9.3)
+- Setup SHA-256: `8D9026711D52E094113DE0421BCB6132AD3C90FA4256E83580EE1401BECE97C0`
+- Update SHA-256: `77F2FCD3E0244E724BFB0C7C811C8AC714EFB11C22A578688601BBFAE7BF3066`
 
-## สิ่งที่เปลี่ยนในเวอร์ชัน 2026.08.11.9.2
+## สิ่งที่เปลี่ยนในเวอร์ชัน 2026.08.11.9.3
 
-- ย้าย “รวม … ฉลาก” ไปบรรทัดเดียวกับวันที่และเบอร์โทร
-- ทำตัวหนาเฉพาะข้อความ “รวม … ฉลาก”
-- ลดวันที่และเบอร์โทรเป็น `11pt` เท่าชื่อหน่วยบริการ
-- โหมด Compact/Dense ใช้ `10.5pt`
-- คง eGFR ที่ `12pt` และระบบ Bootstrap Update จากรุ่นก่อน
+- ทำ “รวม … ฉลาก” ให้หนาชัดขึ้นเหมือนข้อความวิธีใช้
+- ใช้ฟอนต์ `THSarabunNewBold` และน้ำหนัก `900`
+- คงตำแหน่งชิดขวาสุดและขนาด `12.5pt`; Compact/Dense ใช้ `12pt`
+- คงรูปแบบส่วนหัวและ eGFR จากรุ่นก่อน
 
 อ่านรายละเอียดทุกรุ่นได้ที่ [CHANGELOG.md](CHANGELOG.md) และขั้นตอนใช้งานที่ [UPDATE_GUIDE.md](UPDATE_GUIDE.md)
 
