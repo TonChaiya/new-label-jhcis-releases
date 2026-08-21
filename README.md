@@ -21,6 +21,8 @@
 
 อ่านรายละเอียดทุกรุ่นได้ที่ [CHANGELOG.md](CHANGELOG.md) และขั้นตอนใช้งานที่ [UPDATE_GUIDE.md](UPDATE_GUIDE.md)
 
+คู่มือใช้งานไฟล์ที่ดาวน์โหลดจาก Release รุ่นนี้โดยละเอียด: [RELEASE_2026.08.11.9.5_TH.md](RELEASE_2026.08.11.9.5_TH.md)
+
 ## การรักษาข้อมูลเดิม
 
 แพ็กเกจ Release ไม่มีรหัสผ่าน ข้อมูลผู้ป่วย Log หรือ Output จากเครื่องใช้งาน ระบบอัปเดตไม่เขียนทับไฟล์ตั้งค่าเฉพาะเครื่อง เช่น `config.php`, `autoprint_config.php` และ `settings.json`
