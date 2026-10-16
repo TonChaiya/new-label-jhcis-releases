@@ -1,15 +1,15 @@
 ﻿{
     "product":  "New Label JHCIS Autoprint",
     "channel":  "stable",
-    "version":  "2026.10.01.1",
-    "release_url":  "https://github.com/TonChaiya/new-label-jhcis-releases/releases/tag/v2026.10.01.1",
-    "installer_url":  "https://github.com/TonChaiya/new-label-jhcis-releases/releases/download/v2026.10.01.1/NewLabelJHCIS_Setup_2026.10.01.1.exe",
-    "installer_sha256":  "3BE6E746638062E285706A21F1AAB9783E551AACB5D6B39F839A918A926EDF0F",
-    "installer_size":  59729310,
-    "update_url":  "https://github.com/TonChaiya/new-label-jhcis-releases/releases/download/v2026.10.01.1/NewLabelJHCIS_Update_2026.10.01.1.zip",
-    "update_sha256":  "6A85EEBAA4D76738054774FFFE78CA40446D4FBB4AD165006E88FECB3B81B826",
-    "update_size":  81010174,
+    "version":  "2026.10.16.1",
+    "release_url":  "https://github.com/TonChaiya/new-label-jhcis-releases/releases/tag/v2026.10.16.1",
+    "installer_url":  "https://github.com/TonChaiya/new-label-jhcis-releases/releases/download/v2026.10.16.1/NewLabelJHCIS_Setup_2026.10.16.1.exe",
+    "installer_sha256":  "4867C33F678880BEE065DDC48FA748D092D244F415025CD28719DC773BC2DFD7",
+    "installer_size":  59746587,
+    "update_url":  "https://github.com/TonChaiya/new-label-jhcis-releases/releases/download/v2026.10.16.1/NewLabelJHCIS_Update_2026.10.16.1.zip",
+    "update_sha256":  "6F44599EE7588F520C8BB257ABB927C3B2EEB18DFD921C934C24F1089B13BD35",
+    "update_size":  81329881,
     "signed":  false,
     "mandatory":  false,
-    "published_at":  "2026-10-01T10:19:23.1730262+07:00"
+    "published_at":  "2026-10-16T11:26:03.8327702+07:00"
 }
