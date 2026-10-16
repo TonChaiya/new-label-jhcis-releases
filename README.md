@@ -4,14 +4,20 @@
 
 ## เวอร์ชันล่าสุด
 
-- เวอร์ชัน: `2026.10.16.1`
+- เวอร์ชัน: `2026.10.16.2`
 - Channel: `stable`
 - วันที่เผยแพร่: 16 ตุลาคม 2026
-- [ดาวน์โหลดจากหน้า Releases](https://github.com/TonChaiya/new-label-jhcis-releases/releases/tag/v2026.10.16.1)
-- Setup SHA-256: `4867C33F678880BEE065DDC48FA748D092D244F415025CD28719DC773BC2DFD7`
-- Update SHA-256: `6F44599EE7588F520C8BB257ABB927C3B2EEB18DFD921C934C24F1089B13BD35`
+- [ดาวน์โหลดจากหน้า Releases](https://github.com/TonChaiya/new-label-jhcis-releases/releases/tag/v2026.10.16.2)
+- Setup SHA-256: `7E23D4CEE4B9EC885BF9169A55D4276CE536DED2360DD5BDA199527CD0348A26`
+- Update SHA-256: `A8FDE57CB2E65645EF1167465BB6AA415559C617E2AB259D4924B31FD5F03B5D`
 
-## สิ่งที่เปลี่ยนในเวอร์ชัน 2026.10.16.1
+## สิ่งที่เปลี่ยนในเวอร์ชัน 2026.10.16.2
+
+- ปุ่มคิวอัตโนมัติหน้าแรกส่งแบบ Async โดยไม่เขียนทับรายชื่อ ไม่ Reload/Redirect และแสดงสถานะรายแถวจากคิวจริง
+- Batch Poll เฉพาะ Visit ที่ติดตาม สูงสุด 50 รายการ ทุกประมาณ 2.5 วินาที และหยุด/พักเมื่อคิวสิ้นสุด ไม่เหลือรายการ หรือออกจากหน้า
+- ป้องกันกดซ้ำ, คิวชนกัน, Request Replay, Stale Poll และกรณี Reset/Filter/BFCache ด้วย Regression Tests บนข้อมูลสังเคราะห์
+- รักษา Search/Filter, ปุ่ม Manual Print และการพิมพ์เดี่ยว/หลายรายการเดิม; ไม่เปลี่ยน Worker/Tray logic หรือ Schema
+- คงการปรับปรุงการติดตั้งฐานข้อมูลและความสามารถจากรุ่นก่อน:
 
 - เพิ่ม Diagnostics และ Log ของการติดตั้งฐานข้อมูล แยกผลการเชื่อมต่อ การ Setup และการตรวจ Schema
 - ตรวจ PHP Runtime, PDO MySQL และ Config ก่อน Setup พร้อม Retry แบบจำกัดสำหรับข้อผิดพลาดชั่วคราว
@@ -29,7 +35,7 @@
 
 อ่านรายละเอียดทุกรุ่นได้ที่ [CHANGELOG.md](CHANGELOG.md) และขั้นตอนใช้งานที่ [UPDATE_GUIDE.md](UPDATE_GUIDE.md)
 
-คู่มือไฟล์ Setup/Update ของรุ่นนี้: [RELEASE_2026.10.16.1_TH.md](RELEASE_2026.10.16.1_TH.md)
+คู่มือไฟล์ Setup/Update ของรุ่นนี้: [RELEASE_2026.10.16.2_TH.md](RELEASE_2026.10.16.2_TH.md)
 
 ## การรักษาข้อมูลเดิม
 

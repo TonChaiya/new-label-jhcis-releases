@@ -2,6 +2,16 @@
 
 รูปแบบเวอร์ชันใช้ `ปี.เดือน.วัน.ลำดับบิลด์`
 
+## 2026.10.16.2
+
+- ปรับปุ่มคิวอัตโนมัติบนหน้าแรกให้ส่งแบบ Async และแจ้งผลโดยไม่เขียนทับตารางรายชื่อ ไม่ Reload/Redirect
+- เพิ่มสถานะราย Visit ด้วย Read-only Batch Query สูงสุด 50 Visit ทุกประมาณ 2.5 วินาที และหยุด/พัก Poll ตามสถานะคิวและหน้าเว็บ
+- ใช้กลไกคิว Visit เต็มรายการเดิม เพิ่ม Session CSRF, Same-origin validation และ Request ID ป้องกันการส่งซ้ำ; ไม่รับ PID จากหน้าเว็บมาเขียนแทนข้อมูล Visit จริง
+- ป้องกันคิวชนกัน/เขียนทับคิวที่กำลังพิมพ์หรือฉลากเฉพาะรายการ และรักษารหัสคำขอที่ยังไม่ยืนยันเมื่อ Reset/Filter
+- ป้องกัน Poll เก่าทับคำขอใหม่ และไม่ถือว่า done เก่าคือผลของคำขอใหม่ที่ Backend ยังไม่ยืนยัน
+- คงปุ่มพิมพ์เดิม, Manual/Reprint/Batch, Worker/Tray logic และ Schema; เปลี่ยน Controller เฉพาะเวอร์ชันสำหรับ Build
+- เพิ่ม PHP/HTTP fixtures และ Node VM tests; Browser E2E, MySQL concurrency และเครื่องพิมพ์จริงยังไม่ทดสอบ
+
 ## 2026.10.16.1
 
 - เพิ่ม Installer Database Diagnostics พร้อม Exit Code, STDOUT/STDERR และ Completion/Schema Verification Markers โดยไม่บันทึกรหัสผ่านหรือข้อมูลผู้ป่วย
