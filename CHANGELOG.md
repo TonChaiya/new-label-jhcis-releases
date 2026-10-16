@@ -2,6 +2,17 @@
 
 รูปแบบเวอร์ชันใช้ `ปี.เดือน.วัน.ลำดับบิลด์`
 
+## 2026.10.16.1
+
+- เพิ่ม Installer Database Diagnostics พร้อม Exit Code, STDOUT/STDERR และ Completion/Schema Verification Markers โดยไม่บันทึกรหัสผ่านหรือข้อมูลผู้ป่วย
+- เพิ่ม PHP/MySQL Preflight, Config Validation และ Safe Retry ที่จำกัดเวลาและจำนวนครั้งสำหรับการเชื่อมต่อที่ล้มเหลวชั่วคราว
+- เพิ่ม Schema Contract สำหรับ 9 ตารางใน autoprintdb และตรวจ Repair Plan ทั้งหมดก่อน DDL; หยุดเมื่อพบ Unsafe Conflict โดยไม่ลบข้อมูลซ้ำหรือเปลี่ยนชนิดข้อมูลที่เสี่ยงอัตโนมัติ
+- ใช้ Setup Lock ตรวจโครงสร้างซ้ำภายใน Lock และตรวจสภาพจริงหลัง DDL ล้มเหลว; เรียก Setup ซ้ำแล้วไม่ทำ DDL ที่ไม่จำเป็นเมื่อ Schema ครบ
+- Installer รายงาน Database Ready และอนุญาตเปิด Tray หลัง Final Schema Verification ผ่านเท่านั้น
+- Build Controller, Updater, Setup และ Full Update ZIP ใหม่เป็น 2026.10.16.1; ไม่ฝัง Developer Settings ใน Executables และไม่บรรจุ Root autoprintdb.sql
+- ตรวจด้วย Automated Tests/Mock, SQLite in-memory, Installer Diagnostics Harness และ mPDF/FPDI; ยังไม่ถือว่าผ่าน Full Installation บนเครื่องปลายทาง
+- คงฟังก์ชันแก้จำนวน/วิธีใช้ยา พิมพ์ซ้ำเฉพาะรายการ และการรักษา Config/Settings จากรุ่นก่อน
+
 ## 2026.10.01.1
 
 - เพิ่มการแก้ไขจำนวนที่สั่งในหน้า Visit พร้อมกับการแก้ไขวิธีใช้ยา โดยแสดงช่องจำนวนในบรรทัดเดียวกับรหัสยา ชื่อยา หน่วย และวิธีใช้

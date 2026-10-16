@@ -4,25 +4,32 @@
 
 ## เวอร์ชันล่าสุด
 
-- เวอร์ชัน: `2026.10.01.1`
+- เวอร์ชัน: `2026.10.16.1`
 - Channel: `stable`
-- วันที่เผยแพร่: 1 ตุลาคม 2026
-- [ดาวน์โหลดจากหน้า Releases](https://github.com/TonChaiya/new-label-jhcis-releases/releases/tag/v2026.10.01.1)
-- Setup SHA-256: `3BE6E746638062E285706A21F1AAB9783E551AACB5D6B39F839A918A926EDF0F`
-- Update SHA-256: `6A85EEBAA4D76738054774FFFE78CA40446D4FBB4AD165006E88FECB3B81B826`
+- วันที่เผยแพร่: 16 ตุลาคม 2026
+- [ดาวน์โหลดจากหน้า Releases](https://github.com/TonChaiya/new-label-jhcis-releases/releases/tag/v2026.10.16.1)
+- Setup SHA-256: `4867C33F678880BEE065DDC48FA748D092D244F415025CD28719DC773BC2DFD7`
+- Update SHA-256: `6F44599EE7588F520C8BB257ABB927C3B2EEB18DFD921C934C24F1089B13BD35`
 
-## สิ่งที่เปลี่ยนในเวอร์ชัน 2026.10.01.1
+## สิ่งที่เปลี่ยนในเวอร์ชัน 2026.10.16.1
+
+- เพิ่ม Diagnostics และ Log ของการติดตั้งฐานข้อมูล แยกผลการเชื่อมต่อ การ Setup และการตรวจ Schema
+- ตรวจ PHP Runtime, PDO MySQL และ Config ก่อน Setup พร้อม Retry แบบจำกัดสำหรับข้อผิดพลาดชั่วคราว
+- ตรวจ Schema หลัก 9 ตารางก่อนซ่อม หยุดเมื่อพบ Conflict ที่ไม่ปลอดภัย และตรวจครบอีกครั้งก่อนรายงาน Database Ready
+- ใช้ Setup Lock และตรวจสภาพจริงหลัง DDL ล้มเหลว เพื่อรองรับการเรียกซ้ำโดยไม่ทำ DDL ที่ไม่จำเป็น
+- Build Controller, Updater, Setup และ Update ZIP ใหม่เป็นเวอร์ชันเดียวกัน โดยไม่ฝัง Settings ของเครื่องพัฒนาใน EXE
+- คงความสามารถการแก้จำนวน/วิธีใช้ยาและพิมพ์ซ้ำจากรุ่นก่อน:
 
 - หน้า Visit แก้ไขได้ทั้งจำนวนที่สั่งและวิธีใช้ยาเฉพาะรายการยา Auto print
 - เปลี่ยนเฉพาะ `visitdrug.unit` และ `visitdrug.dose` ของ Visit/รหัสยาที่เลือก โดยตรวจข้อมูลเดิมก่อนบันทึกเพื่อป้องกันการแก้ทับกัน
 - บันทึกแล้วพิมพ์ซ้ำเฉพาะฉลากที่เปลี่ยน และคงปุ่มพิมพ์ Auto ทีละรายการไว้
 - รายการที่ไม่ใช่ `drugtype` 01, 04, 10 แสดงแบบอ่านอย่างเดียวและไม่ถูกอัปเดต
 - รวมหน้าเว็บ ระบบ LAN ลูกประคบ Tray และ Updater จากรุ่นก่อนครบชุด
-- Update ZIP เป็นชุดระบบเต็ม รองรับการข้ามหลายเวอร์ชัน และไม่เขียนทับ config, settings, log, output หรือฐานข้อมูลเดิม
+- Update ZIP เป็นชุดระบบเต็มและรักษา config, settings, log และ output; Setup อาจเพิ่มโครงสร้าง autoprintdb ที่ขาดโดยไม่ลบข้อมูลเดิม การข้ามรุ่นต้องใช้ Updater เดิมที่รองรับรูปแบบแพ็กเกจนี้
 
 อ่านรายละเอียดทุกรุ่นได้ที่ [CHANGELOG.md](CHANGELOG.md) และขั้นตอนใช้งานที่ [UPDATE_GUIDE.md](UPDATE_GUIDE.md)
 
-คู่มือไฟล์ Setup/Update ของรุ่นนี้: [RELEASE_2026.10.01.1_TH.md](RELEASE_2026.10.01.1_TH.md)
+คู่มือไฟล์ Setup/Update ของรุ่นนี้: [RELEASE_2026.10.16.1_TH.md](RELEASE_2026.10.16.1_TH.md)
 
 ## การรักษาข้อมูลเดิม
 
