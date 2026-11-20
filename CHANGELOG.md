@@ -2,6 +2,15 @@
 
 รูปแบบเวอร์ชันใช้ `ปี.เดือน.วัน.ลำดับบิลด์`
 
+## 2026.11.20.1
+
+- ปรับจำนวนจ่ายยาบน Autoprint/visit_details.php ให้รับ 0–999999 โดยเปลี่ยน HTML min, POST validation และขั้นต่ำในฟังก์ชันบันทึกให้ตรงกัน
+- คงการระบุแถว visitdrug ด้วย pcucode + visitno + drugcode, ตรวจค่าเดิม/Row Lock/Transaction และจำกัดรายการแก้ไขเป็น drugtype 01,04,10 ตามเดิม
+- คงการพิมพ์ซ้ำเฉพาะรายการที่แก้และปุ่มพิมพ์เดี่ยว ค่า 0 ไม่ได้หมายถึงลบหรือยกเลิกรายการยา
+- ไม่เปลี่ยน Worker/Renderer/Updater logic หรือ Schema; Build Tray Controller, Updater, Installer และ Update ZIP ใหม่เป็นเวอร์ชันเดียวกัน
+- เพิ่ม Tests จำนวน 0/วิธีใช้ขณะจำนวน 0/ข้อมูลอื่นไม่เปลี่ยน ผ่าน HTTP บนสำเนาหน้าจริงและ SQLite, JavaScript Node VM และ PDF หนึ่งหน้าจาก Worker HTML เดิม
+- ผ่าน Regression/Packaging Validation; Browser E2E, MySQL concurrency และติดตั้ง/พิมพ์บนเครื่องจริงยังไม่ได้ทดสอบในรอบนี้
+
 ## 2026.10.16.2
 
 - ปรับปุ่มคิวอัตโนมัติบนหน้าแรกให้ส่งแบบ Async และแจ้งผลโดยไม่เขียนทับตารางรายชื่อ ไม่ Reload/Redirect
